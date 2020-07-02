@@ -5,7 +5,7 @@ const fs = require('fs')
 const path = require('path')
 
 
-const monthone= fs.readFileSync("../xingzuo/tomorrow.json")
+const monthone= fs.readFileSync("../xingzuo/toDay.json")
 const monthtow= fs.readFileSync("../xingzuo/YesOrNotoDay.json")
 
 const monthoneData = JSON.parse(monthone)
@@ -95,4 +95,4 @@ function getAllData(monthoneData, monthtowData) {
 
 getAllData(monthoneData,monthtowData)
 // console.log(listData)
-fs.writeFileSync(path.resolve('./tomorrow.json'), detailsMonth)
+fs.writeFileSync(path.resolve('./toDay.json'), detailsMonth)

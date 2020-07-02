@@ -106,7 +106,7 @@ async function getData() {
   //   detailsA += JSON.stringify(details[i])+ '\n'
   // }
   // console.log(details)
-  fs.writeFileSync(path.resolve('./tomorrow.json'), JSON.stringify(details))
+  fs.writeFileSync(path.resolve('./Month.json'), JSON.stringify(details))
 
 
   //年
@@ -186,7 +186,7 @@ async function getData() {
 
 }
 
-// getData()
+getData()
 //获取本周数据
 async function getWeek(){
   const baseUrl = `https://www.xzw.com`
@@ -277,7 +277,7 @@ async function getWeek(){
   })
   fs.writeFileSync(path.resolve('./Week.json'), JSON.stringify(detailsWeek))
 }
-// getWeek()
+getWeek()
 async function getWeekYesOrNo() {
   const baseUrl = `https://www.d1xz.net`
   const res = await request(`https://www.d1xz.net/yunshi/`).charset('utf-8')
@@ -337,7 +337,7 @@ async function getWeekYesOrNo() {
   fs.writeFileSync(path.resolve('./YesOrNoWeek.json'), JSON.stringify(details))
 
 }
-// getWeekYesOrNo()
+getWeekYesOrNo()
 async function getMonthData() {
   const baseUrl = `https://www.d1xz.net`
   const res = await request(`https://www.d1xz.net/yunshi/`).charset('utf-8')
@@ -407,7 +407,7 @@ async function getMonthData() {
 //     }
 //   })
 }
-// getMonthData()
+getMonthData()
 
 
 //获取今日
@@ -503,10 +503,10 @@ async function gettoDayData() {
   //   detailsA += JSON.stringify(details[i])+ '\n'
   // }
   // console.log(details)
-  fs.writeFileSync(path.resolve('./tomorrow.json'), JSON.stringify(details))
+  fs.writeFileSync(path.resolve('./toDay.json'), JSON.stringify(details))
 
 }
-// gettoDayData()
+gettoDayData()
 async function gettoDayDataElse() {
   const baseUrl = `https://www.d1xz.net`
   const res = await request(`https://www.d1xz.net/yunshi/`).charset('utf-8')
@@ -588,7 +588,7 @@ async function gettoDayDataElse() {
   })
   fs.writeFileSync(path.resolve('./YesOrNotoDay.json'), JSON.stringify(details))
 }
-// gettoDayDataElse()
+gettoDayDataElse()
 
 
 //获取明天
